@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyWebsite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item"><a class="btn btn-outline-light me-2" href="#">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container my-5">
+        <h1>Welcome to MyWebsite</h1>
+    
+    </main>
+
+    <footer class="bg-dark text-light text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 MyWebsite. All rights reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="text-light" href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a class="text-light" href="#">Terms of Service</a></li>
+                <li class="list-inline-item"><a class="text-light" href="#">Contact</a></li>
+            </ul>
+            <div>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
