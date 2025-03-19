@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chỉnh sửa lịch đặt chỗ</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <h3>Chỉnh sửa lịch đặt chỗ</h3>
+  <form action="/update/<%= booking.id %>" method="POST">
+    <input type="text" name="customerName" value="<%= booking.customerName %>" required>
+    <input type="date" name="date" value="<%= booking.date %>" required>
+    <input type="time" name="time" value="<%= booking.time %>" required>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+  </form>
+</body>
+</html>

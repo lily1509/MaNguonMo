@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,3 +14,57 @@
         <h2>Email: <%= user.email %> </h2>
     </body>
 </html>
+=======
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý Lịch Đặt Chỗ</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <%- include("header") %>
+
+  <h3>Đặt chỗ mới</h3>
+  <form action="/add" method="POST">
+    <input type="text" name="customerName" placeholder="Tên khách hàng" required>
+    <input type="date" name="date" required>
+    <input type="time" name="time" required>
+    <button type="submit"  class="btn btn-primary">Đặt chỗ</button>
+  </form>
+
+  <h3>Danh sách đặt chỗ</h3>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Tên khách hàng</th>
+      <th>Ngày</th>
+      <th>Giờ</th>
+      <th>Trạng thái</th>
+      <th>Hành động</th>
+    </tr>
+    <% bookings.forEach(booking => { %>
+      <tr>
+        <td><%= booking.id %></td>
+        <td><%= booking.customerName %></td>
+        <td><%= booking.date %></td>
+        <td><%= booking.time %></td>
+        <td style= "color: <%= booking.status === 'Pending' ? 'orange' : booking.status === 'Confirmed' ? 'green' : 'red' %>">
+            <%= booking.status %>
+        </td>
+        <td>
+            <!-- Nút Sửa -->
+            <a href="/edit/<%= booking.id %>" class="btn btn-edit">Sửa</a>
+        
+            <!-- Nút Hủy -->
+            <form action="/cancel/<%= booking.id %>" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-cancel">Hủy</button>
+            </form>
+        </td>
+        
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
+>>>>>>> ce83049 (Lab1)
