@@ -5,11 +5,12 @@ const user = {
   
   class HomeController {
     static index(req, res) {
-      res.render("index", { user });
+      res.render('index', { bookings: danhSachDatCho });
     }
   
     static about(req, res) {
-      res.render("index", { user });
+      res.render('index', { bookings: danhSachDatCho });
+
     }
   }
   

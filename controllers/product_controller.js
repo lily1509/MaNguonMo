@@ -45,7 +45,7 @@ const categories = [
   
   class ProductController {
     static index(req, res) {
-      res.render("product");
+      res.render("product",{products});
     }
   }
   
